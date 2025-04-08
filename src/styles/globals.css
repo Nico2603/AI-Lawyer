@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 217 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 33% 58%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 0 90% 60%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 100% 50%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .chat-bubble {
+    @apply p-4 rounded-lg max-w-[80%];
+  }
+
+  .chat-bubble-user {
+    @apply chat-bubble bg-primary-500 text-white ml-auto;
+  }
+
+  .chat-bubble-ai {
+    @apply chat-bubble bg-neutral-200 text-neutral-800;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 
+    disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary-500 text-white hover:bg-secondary-600;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent hover:bg-neutral-200 text-neutral-700;
+  }
+
+  .card {
+    @apply bg-white rounded-lg border border-neutral-200 shadow-soft overflow-hidden;
+  }
+
+  .input {
+    @apply flex h-10 w-full rounded-md border border-neutral-200 bg-transparent px-3 py-2 text-sm 
+    file:border-0 file:bg-transparent file:text-sm file:font-medium 
+    placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 
+    focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+} 
