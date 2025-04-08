@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Header from '@/components/Header';
+import Header from '@/components/layout/Header';
 import ChatWindow from '@/components/ChatWindow';
-import Footer from '@/components/Footer';
+import Footer from '@/components/layout/Footer';
 
 export default function Home() {
   return (
